@@ -157,7 +157,15 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-white font-open-sans">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-premium-blue to-premium-light text-white py-20 px-4">
+      <section className="relative bg-gradient-to-r from-premium-teal to-premium-light text-white py-20 px-4 overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img
+            src="/img/704d994d-327d-4129-9d0d-7c1f19556f4e.jpg"
+            alt="Business team"
+            className="w-full h-full object-cover opacity-20"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-premium-teal/80 to-premium-light/80"></div>
+        </div>
         <div className="max-w-7xl mx-auto">
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-5xl md:text-6xl font-bold font-montserrat mb-8 animate-fade-in">

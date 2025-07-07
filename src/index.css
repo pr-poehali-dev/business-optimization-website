@@ -15,7 +15,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 30 58.8% 28.2%;
+    --primary: 24 100% 50%;
     --primary-foreground: 210 40% 98%;
 
     --secondary: 210 40% 96.1%;
@@ -35,6 +35,13 @@
     --ring: 222.2 84% 4.9%;
 
     --radius: 0.5rem;
+
+    /* Custom colors */
+    --teal-dark: 184 91% 17%;
+    --teal-light: 186 100% 94%;
+    --teal-accent: 185 84% 25%;
+    --orange-primary: 24 100% 50%;
+    --orange-hover: 24 100% 45%;
 
     --sidebar-background: 0 0% 98%;
 

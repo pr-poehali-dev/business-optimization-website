@@ -63,9 +63,18 @@ export default {
           ring: "hsl(var(--sidebar-ring))",
         },
         premium: {
-          blue: "#1E40AF",
-          light: "#374151",
-          accent: "#F0F9FC",
+          teal: "#134E4A",
+          light: "#0F766E",
+          accent: "#F0FDFA",
+        },
+        teal: {
+          dark: "hsl(var(--teal-dark))",
+          light: "hsl(var(--teal-light))",
+          accent: "hsl(var(--teal-accent))",
+        },
+        orange: {
+          primary: "hsl(var(--orange-primary))",
+          hover: "hsl(var(--orange-hover))",
         },
       },
       fontFamily: {
