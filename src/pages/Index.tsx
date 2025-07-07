@@ -166,7 +166,7 @@ const Index = () => {
           />
           <div className="absolute inset-0 bg-gradient-to-r from-premium-teal/80 to-premium-light/80"></div>
         </div>
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-5xl md:text-6xl font-bold font-montserrat mb-8 animate-fade-in">
               Оптимизация бизнеса в Калмыкии
@@ -175,7 +175,7 @@ const Index = () => {
               <p className="text-xl mb-6">{bannerText}</p>
               <Button
                 size="lg"
-                className="bg-white text-premium-blue hover:bg-gray-100 text-lg px-8 py-4 font-semibold"
+                className="bg-orange-primary text-white hover:bg-orange-hover text-lg px-8 py-4 font-semibold"
                 onClick={() =>
                   document
                     .getElementById("contact-form")
@@ -193,7 +193,7 @@ const Index = () => {
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold font-montserrat text-premium-blue mb-8">
+            <h2 className="text-4xl font-bold font-montserrat text-premium-teal mb-8">
               Вы стремитесь развивать бизнес, минимизировать затраты и работать
               в комфортных условиях?
             </h2>
@@ -215,7 +215,7 @@ const Index = () => {
       {/* Advantages */}
       <section className="py-20 px-4 bg-premium-accent/50">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold font-montserrat text-center text-premium-blue mb-16">
+          <h2 className="text-4xl font-bold font-montserrat text-center text-premium-teal mb-16">
             Наши преимущества
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -225,7 +225,7 @@ const Index = () => {
                 className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow"
               >
                 <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0 w-2 h-2 bg-premium-blue rounded-full mt-2"></div>
+                  <div className="flex-shrink-0 w-2 h-2 bg-premium-teal rounded-full mt-2"></div>
                   <p className="text-gray-700 font-medium">{advantage}</p>
                 </div>
               </div>
@@ -237,7 +237,7 @@ const Index = () => {
       {/* Services Catalog */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold font-montserrat text-center text-premium-blue mb-16">
+          <h2 className="text-4xl font-bold font-montserrat text-center text-premium-teal mb-16">
             Каталог услуг
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -247,13 +247,13 @@ const Index = () => {
                 className="h-full hover:shadow-lg transition-shadow duration-300 border-0 shadow-md"
               >
                 <CardHeader className="pb-4">
-                  <div className="flex items-center justify-center w-16 h-16 bg-premium-blue/10 rounded-lg mb-4">
+                  <div className="flex items-center justify-center w-16 h-16 bg-premium-teal/10 rounded-lg mb-4">
                     <Icon
                       name={service.icon}
-                      className="w-8 h-8 text-premium-blue"
+                      className="w-8 h-8 text-premium-teal"
                     />
                   </div>
-                  <CardTitle className="text-xl font-montserrat text-premium-blue leading-tight">
+                  <CardTitle className="text-xl font-montserrat text-premium-teal leading-tight">
                     {service.title}
                   </CardTitle>
                 </CardHeader>
@@ -263,11 +263,11 @@ const Index = () => {
                   </CardDescription>
                   <div className="space-y-4">
                     <div className="bg-premium-accent/30 p-4 rounded-lg">
-                      <p className="font-semibold text-premium-blue whitespace-pre-line">
+                      <p className="font-semibold text-premium-teal whitespace-pre-line">
                         {service.price}
                       </p>
                     </div>
-                    <Button className="w-full bg-premium-blue hover:bg-premium-blue/90">
+                    <Button className="w-full bg-orange-primary hover:bg-orange-hover">
                       Оставить заявку
                     </Button>
                   </div>
@@ -288,7 +288,7 @@ const Index = () => {
       <section className="py-20 px-4 bg-gray-50">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold font-montserrat text-premium-blue mb-4">
+            <h2 className="text-4xl font-bold font-montserrat text-premium-teal mb-4">
               Подберем решение для вашего бизнеса
             </h2>
             <p className="text-lg text-gray-600">
@@ -308,7 +308,7 @@ const Index = () => {
                     <div
                       key={step}
                       className={`w-3 h-3 rounded-full ${
-                        step <= quizStep ? "bg-premium-blue" : "bg-gray-300"
+                        step <= quizStep ? "bg-premium-teal" : "bg-gray-300"
                       }`}
                     />
                   ))}
@@ -316,7 +316,7 @@ const Index = () => {
               </div>
               <div className="w-full bg-gray-200 rounded-full h-2">
                 <div
-                  className="bg-premium-blue h-2 rounded-full transition-all duration-300"
+                  className="bg-premium-teal h-2 rounded-full transition-all duration-300"
                   style={{ width: `${(quizStep / 3) * 100}%` }}
                 />
               </div>
@@ -443,6 +443,7 @@ const Index = () => {
               </Button>
               <Button
                 onClick={handleQuizNext}
+                className="bg-orange-primary hover:bg-orange-hover"
                 disabled={
                   (quizStep === 1 && !quizAnswers.business) ||
                   (quizStep === 2 && !quizAnswers.activity) ||
@@ -459,7 +460,7 @@ const Index = () => {
       {/* What You Get */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold font-montserrat text-center text-premium-blue mb-16">
+          <h2 className="text-4xl font-bold font-montserrat text-center text-premium-teal mb-16">
             Что вы получите
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -469,14 +470,14 @@ const Index = () => {
                 className="text-center p-8 hover:shadow-lg transition-shadow"
               >
                 <div className="flex justify-center mb-6">
-                  <div className="w-16 h-16 bg-premium-blue/10 rounded-full flex items-center justify-center">
+                  <div className="w-16 h-16 bg-premium-teal/10 rounded-full flex items-center justify-center">
                     <Icon
                       name={benefit.icon}
-                      className="w-8 h-8 text-premium-blue"
+                      className="w-8 h-8 text-premium-teal"
                     />
                   </div>
                 </div>
-                <h3 className="text-xl font-bold font-montserrat text-premium-blue mb-4">
+                <h3 className="text-xl font-bold font-montserrat text-premium-teal mb-4">
                   {benefit.title}
                 </h3>
                 <p className="text-gray-600">{benefit.description}</p>
@@ -489,7 +490,7 @@ const Index = () => {
       {/* Why Us */}
       <section className="py-20 px-4 bg-premium-accent/50">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold font-montserrat text-center text-premium-blue mb-16">
+          <h2 className="text-4xl font-bold font-montserrat text-center text-premium-teal mb-16">
             Почему мы
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -499,14 +500,14 @@ const Index = () => {
                 className="p-6 hover:shadow-lg transition-shadow"
               >
                 <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-premium-blue/10 rounded-lg flex items-center justify-center">
+                  <div className="flex-shrink-0 w-12 h-12 bg-premium-teal/10 rounded-lg flex items-center justify-center">
                     <Icon
                       name={item.icon}
-                      className="w-6 h-6 text-premium-blue"
+                      className="w-6 h-6 text-premium-teal"
                     />
                   </div>
                   <div>
-                    <h3 className="text-lg font-bold font-montserrat text-premium-blue mb-2">
+                    <h3 className="text-lg font-bold font-montserrat text-premium-teal mb-2">
                       {item.title}
                     </h3>
                     <p className="text-gray-600 text-sm">{item.description}</p>
@@ -521,7 +522,7 @@ const Index = () => {
       {/* Partnership */}
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold font-montserrat text-premium-blue mb-8">
+          <h2 className="text-4xl font-bold font-montserrat text-premium-teal mb-8">
             Партнерство
           </h2>
           <Card className="p-8 bg-gradient-to-r from-premium-blue to-premium-light text-white">
@@ -538,7 +539,7 @@ const Index = () => {
                 от стоимости договора за каждого приведённого клиента!
               </div>
             </div>
-            <Button className="bg-white text-premium-blue hover:bg-gray-100">
+            <Button className="bg-white text-premium-teal hover:bg-gray-100">
               Стать партнером
             </Button>
           </Card>
@@ -549,7 +550,7 @@ const Index = () => {
       <section id="contact-form" className="py-20 px-4 bg-gray-50">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold font-montserrat text-premium-blue mb-4">
+            <h2 className="text-4xl font-bold font-montserrat text-premium-teal mb-4">
               Свяжитесь с нами
             </h2>
             <p className="text-lg text-gray-600">
@@ -611,7 +612,7 @@ const Index = () => {
 
               <Button
                 type="submit"
-                className="w-full bg-premium-blue hover:bg-premium-blue/90 text-lg py-6"
+                className="w-full bg-orange-primary hover:bg-orange-hover text-lg py-6"
               >
                 Отправить заявку
               </Button>
@@ -621,8 +622,16 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 px-4 bg-premium-blue text-white">
-        <div className="max-w-7xl mx-auto">
+      <footer className="py-12 px-4 bg-premium-teal text-white relative overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img
+            src="/img/ed416f67-9e35-4e8c-9c55-efc95b591116.jpg"
+            alt="Office building"
+            className="w-full h-full object-cover opacity-10"
+          />
+          <div className="absolute inset-0 bg-premium-teal/90"></div>
+        </div>
+        <div className="max-w-7xl mx-auto relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
               <h3 className="text-xl font-bold font-montserrat mb-4">
